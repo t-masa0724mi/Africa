@@ -15,13 +15,6 @@ struct MapView: View {
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: locations, annotationContent: {
             item in
-//            MapPin(coordinate: item.location, tint: .accentColor)
-//            MapMarker(coordinate: item.location, tint: .accentColor)
-//            MapAnnotation(coordinate: item.location) {
-//                Image("logo")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 32, height: 32, alignment: .center)
             MapAnnotation(coordinate: item.location) {
                 MapAnnotaionView(location: item)
             }
